@@ -1,0 +1,8 @@
+{
+  "name": "zikir",
+  "compatibility_date": "2026-10-01",
+  // Static-only Worker: everything in ./public is served as-is, no Worker script needed.
+  "assets": {
+    "directory": "./public"
+  }
+}
