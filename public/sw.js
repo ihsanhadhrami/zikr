@@ -1,4 +1,4 @@
-const VERSION = 'zikir-v1';
+const VERSION = 'zikir-v2';
 const SHELL = [
   './',
   'index.html',
@@ -6,7 +6,9 @@ const SHELL = [
   'app.js',
   'data.js',
   'manifest.webmanifest',
-  'icons/icon.svg',
+  'icons/logo-mark.png',
+  'icons/favicon-32.png',
+  'icons/favicon-48.png',
   'icons/icon-192.png',
   'icons/icon-512.png',
   'icons/apple-touch-icon.png'

@@ -21,7 +21,9 @@ Semua fail aplikasi berada dalam `public/`:
 - `manifest.webmanifest`, `icons/`: maklumat pemasangan PWA
 - `_headers`: header HTTP untuk Cloudflare (jenis manifest, cache service worker)
 
-`wrangler.jsonc` ialah konfigurasi Cloudflare Worker.
+`wrangler.jsonc` ialah konfigurasi Cloudflare Worker. `src/worker.js` menghidangkan fail dalam
+`public/` dan menukar URL pratonton pautan (`og:image`) kepada URL penuh supaya logo dipaparkan
+apabila pautan dikongsi di WhatsApp, Telegram, Facebook dan X.
 
 ## Uji secara lokal
 ```

@@ -12,8 +12,28 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Zikir">
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="icon" href="icons/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="icons/favicon-48.png" sizes="48x48" type="image/png">
+  <link rel="icon" href="icons/icon-192.png" sizes="192x192" type="image/png">
   <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+
+  <!-- Link previews (WhatsApp, Telegram, Facebook, X). The Worker rewrites
+       data-abs URLs to absolute ones for whichever domain serves the page. -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ZIKR">
+  <meta property="og:locale" content="ms_MY">
+  <meta property="og:title" content="Zikir Pagi & Petang | ZIKR">
+  <meta property="og:description" content="Zikir pagi dan petang, satu zikir pada satu masa dengan pengira tasbih. Boleh digunakan tanpa internet.">
+  <meta property="og:url" content="/" data-abs>
+  <meta property="og:image" content="/icons/og-image.png" data-abs>
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Logo ZIKR oleh Ihsan Hadhrami">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Zikir Pagi & Petang | ZIKR">
+  <meta name="twitter:description" content="Zikir pagi dan petang, satu zikir pada satu masa dengan pengira tasbih.">
+  <meta name="twitter:image" content="/icons/og-image.png" data-abs>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
@@ -29,7 +49,7 @@
   <div class="app">
     <header class="topbar">
       <div class="brand">
-        <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true"><use href="#star8"/></svg>
+        <img class="brand-mark" src="icons/logo-mark.png" width="38" height="38" alt="ZIKR">
         <div>
           <h1 id="appTitle">Zikir Pagi</h1>
           <p class="brand-ar" lang="ar" dir="rtl">أذكار الصباح والمساء</p>
