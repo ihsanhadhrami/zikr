@@ -276,7 +276,7 @@
 
   // ---------- Render: list ----------
   function renderList() {
-    $('#listSub').textContent = `${mode === 'pagi' ? 'Zikir Pagi' : 'Zikir Petang'} · ketik untuk terus ke zikir`;
+    $('#listSub').textContent = `${mode === 'pagi' ? 'Zikir Pagi' : 'Zikir Petang'} · klik untuk terus ke zikir`;
     const body = $('#listBody');
     body.innerHTML = '';
     SECTIONS.forEach((s, si) => {
@@ -353,7 +353,7 @@
   $('#optFont').addEventListener('input', (e) => { settings.fontSize = +e.target.value; saveSettings(); applySettings(); });
   $$('#themes button').forEach((b) => b.addEventListener('click', () => { settings.theme = b.dataset.theme; saveSettings(); applySettings(); }));
   $('#resetAll').addEventListener('click', () => {
-    if (!confirm('Padam semua kemajuan dan statistik? Tindakan ini tidak boleh dibatalkan.')) return;
+    if (!confirm('Padam semua update dan statistik? Tindakan ini tidak boleh dibatalkan.')) return;
     store.clear();
     stats = { daily: {}, done: {}, total: 0, best: 0 };
     counts = {};
@@ -376,6 +376,15 @@
   $$('.tab').forEach((t) => t.addEventListener('click', () => showView(t.dataset.view)));
 
   // ---------- Events ----------
+  // Header logo: refresh the page, checking for a newer app version first
+  $('#logoBtn').addEventListener('click', async () => {
+    $('#logoBtn').classList.add('is-loading');
+    try {
+      const reg = await navigator.serviceWorker?.getRegistration();
+      if (reg) await Promise.race([reg.update(), new Promise((r) => setTimeout(r, 1500))]);
+    } catch { /* offline: just reload from cache */ }
+    location.reload();
+  });
   $('#tapBtn').addEventListener('click', tap);
   $('#prevBtn').addEventListener('click', () => go(idx - 1));
   $('#nextBtn').addEventListener('click', () => go(idx + 1));

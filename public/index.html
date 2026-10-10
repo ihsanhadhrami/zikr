@@ -49,7 +49,7 @@
   <div class="app">
     <header class="topbar">
       <div class="brand">
-        <img class="brand-mark" src="icons/logo-mark.png" width="38" height="38" alt="ZIKR">
+        <button class="brand-btn" id="logoBtn" type="button" aria-label="Muat semula halaman" title="Muat semula"><img class="brand-mark" src="icons/logo-mark.png" width="38" height="38" alt="ZIKR"></button>
         <div>
           <h1 id="appTitle">Zikir Pagi</h1>
           <p class="brand-ar" lang="ar" dir="rtl">أذكار الصباح والمساء</p>
@@ -128,7 +128,7 @@
             <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
           </button>
         </div>
-        <p class="hint" id="hint">Ketik bulatan untuk mengira · leret untuk bertukar</p>
+        <p class="hint" id="hint">Klik bulatan untuk mengira · slide untuk bertukar</p>
 
         <div class="done-overlay" id="doneOverlay" hidden>
           <div class="done-card">
@@ -151,7 +151,7 @@
       <section class="view" id="view-list" aria-label="Senarai zikir">
         <div class="page-head">
           <h2>Senarai Zikir</h2>
-          <p id="listSub">Ketik untuk terus ke zikir</p>
+          <p id="listSub">Klik untuk terus ke zikir</p>
         </div>
         <div id="listBody"></div>
       </section>
@@ -219,14 +219,14 @@
 
         <div class="panel list-panel">
           <button class="row" id="installBtn" hidden>
-            <span><b>Pasang aplikasi</b><small>Tambah ke skrin utama untuk akses pantas</small></span>
+            <span><b>Install aplikasi</b><small>Tambah ke skrin utama untuk akses pantas</small></span>
             <svg class="chev" viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
           </button>
           <div class="row" id="iosHint" hidden>
             <span><b>Pasang di iPhone / iPad</b><small>Tekan butang Kongsi di Safari, kemudian pilih “Tambah ke Skrin Utama”.</small></span>
           </div>
           <button class="row danger" id="resetAll">
-            <span><b>Padam semua data</b><small>Kosongkan kemajuan dan statistik</small></span>
+            <span><b>Padam semua data</b><small>Kosongkan update dan statistik</small></span>
             <svg class="chev" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
           </button>
         </div>

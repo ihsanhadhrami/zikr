@@ -93,7 +93,12 @@ main { position: relative; min-height: 0; }
 
 .topbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 16px 8px; }
 .brand { display: flex; align-items: center; gap: 10px; min-width: 0; }
-.brand-mark { width: 38px; height: 38px; border-radius: 11px; flex: none; box-shadow: 0 0 0 1px var(--border-2), 0 4px 16px -4px var(--glow); }
+.brand-btn { flex: none; border-radius: 11px; transition: transform .15s ease; }
+.brand-btn:active { transform: scale(.9); }
+.brand-btn:focus-visible { outline: 2px solid var(--accent-2); outline-offset: 2px; }
+.brand-btn.is-loading .brand-mark { animation: spin .6s ease-in-out infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.brand-mark { display: block; width: 38px; height: 38px; border-radius: 11px; box-shadow: 0 0 0 1px var(--border-2), 0 4px 16px -4px var(--glow); }
 .brand h1 { margin: 0; font-size: 17px; font-weight: 700; letter-spacing: -0.01em; white-space: nowrap; }
 .brand-ar { margin: 0; font-family: var(--font-ar); font-size: 14px; color: var(--muted); line-height: 1.3; text-align: left; }
 
