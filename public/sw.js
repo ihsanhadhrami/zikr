@@ -1,4 +1,4 @@
-const VERSION = 'zikir-v3';
+const VERSION = 'zikir-v4';
 const SHELL = [
   './',
   'index.html',
